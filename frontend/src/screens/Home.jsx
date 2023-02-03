@@ -1,6 +1,6 @@
 function Home() {
   return (
-    <h1>User authentication with Redux toolkit & JWT</h1>
+    <div>Home</div>
   )
 }
 export default Home

@@ -1,0 +1,60 @@
+.candidate-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.candidate-container .candidate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 600px;
+    height: 155px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  
+}
+
+.candidate .image-container {
+    position: relative;
+    padding: 2px;
+}
+
+.candidate .image-container .image {
+    width: 140px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.candidate .image-container .logo {
+    width: 70px;
+    border: 1px solid black;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.candidate .btn-container {
+    display: grid;
+    place-content: center;
+    padding: 5px;
+}
+
+.candidate .btn-container button {
+    width: 50px;
+    height: 140px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color: rgb(7, 193, 7);
+    transition: all 0.5s;
+}
+
+.candidate .btn-container button:hover {
+    background-color: rgb(21, 164, 21);
+}

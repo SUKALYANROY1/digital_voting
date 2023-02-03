@@ -7,6 +7,7 @@ import Profile from './screens/Profile'
 import Header from './components/Header'
 import ProtectedRoute from './routing/ProtectedRoute'
 import Dashboard from './screens/Dashboard'
+import AdminPannel from './screens/AdminPannel'
 
 function App() {
 	return (
@@ -17,10 +18,11 @@ function App() {
 					<Route path='/' element={<Home />} />
 					<Route path='/login' element={<Login />} />
 					<Route path='/register' element={<Register />} />
-          <Route element={<ProtectedRoute/>}>
-            <Route path='/profile' element={<Profile/>} />
-						<Route path='/dashboard' element={<Dashboard/>} />
-          </Route>
+					<Route element={<ProtectedRoute />}>
+						<Route path='/profile' element={<Profile />} />
+						<Route path='/dashboard' element={<Dashboard />} />
+						<Route path='/admin' element={<AdminPannel />} />
+					</Route>
 				</Routes>
 			</main>
 		</Router>

@@ -27,7 +27,7 @@ const RegisterScreen = () => {
       setCustomError('Password mismatch')
       return
     }
-
+    data.image = 'sample image'
     dispatch(userRegister(data))
   }
 

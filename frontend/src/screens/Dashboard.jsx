@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { getAllCandidates, voteCandidate, resetVotes } from '../features/candidate/candidateActions'
 import { useEffect } from 'react'
 import Error from '../components/Error'
+import Candidate from "../components/Candidate"
 
 const Dashboard = () => {
 	const { candidates, loading, error } = useSelector(
@@ -29,19 +30,12 @@ const Dashboard = () => {
 		<>
 			<div>
 
-			{error && <Error>{error}</Error>}
+				{error && <Error>{error}</Error>}
 			</div>
-			<button onClick={() => dispatch(resetVotes())}>Reset</button>
 			<div className="candidate-container">
-				{candidates?.map((candidate) => {
-					return (
-						<div key={candidate._id} className="candidate">
-							<h2>{candidate.name}</h2>
-							<h3>{candidate.votes}</h3>
-							<button onClick={() => handleClick(candidate._id)}>Vote</button>
-						</div>
-					)
-				})}
+				{
+					candidates?.map(candidate => <Candidate key={candidate._id} {...candidate} handleClick={handleClick} />)
+				}
 			</div>
 		</>
 	)

@@ -39,6 +39,9 @@ const Header = () => {
         {
           userInfo ? (<>
             <NavLink to='/dashboard'>Dashboard</NavLink>
+            {
+              userInfo.isAdmin && <NavLink to='/admin'>Admin Pannel</NavLink>
+            }
           </>) : (
             <>
             <NavLink to='/login'>Login</NavLink>
