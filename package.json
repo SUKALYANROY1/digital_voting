@@ -10,7 +10,7 @@
     "client": "npm start --prefix frontend",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
-  "author": "Saikat Das",
+  "author": "Sukalyan Roy",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
